@@ -1,0 +1,13 @@
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/Layouts.UI.LoginPage.xaml
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/LoginPage.xaml.g.cs
+/Users/prudvee/Projects/Layouts/Layouts/bin/Debug/Layouts.dll.mdb
+/Users/prudvee/Projects/Layouts/Layouts/bin/Debug/Layouts.dll
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/Layouts.dll
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/Layouts.dll.mdb
+/Users/prudvee/Projects/Layouts/Layouts/bin/Debug/Xamarin.Forms.Core.dll
+/Users/prudvee/Projects/Layouts/Layouts/bin/Debug/Xamarin.Forms.Xaml.dll
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/Layouts.UI.ExpandCollapse.xaml
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/ExpandCollapse.xaml.g.cs
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/Layouts.UI.PageThree.xaml
+/Users/prudvee/Projects/Layouts/Layouts/obj/Debug/PageThree.xaml.g.cs

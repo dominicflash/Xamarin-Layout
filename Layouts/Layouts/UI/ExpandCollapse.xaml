@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+xmlns:local="clr-namespace:Layouts;assembly=Layouts"
+x:Class="Layouts.ExpandCollapse" Title="Expand">
+
+<ContentPage.Content>
+	<RelativeLayout>
+		<!-- Main Stacklayout-->
+		<StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1.0}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1.0}" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Orientation="Vertical" Spacing="0" Padding="0">
+			
+
+			<!-- SaveShopping cart/Collapse Expand layouts -->
+			<StackLayout HeightRequest="40" Padding="0,1,0,0" Spacing="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="Transparent">
+					<StackLayout x:Name="continueLayout" Padding="0,0,0,0" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="#01A2B4" WidthRequest="50">
+					<Label TextColor="White" Font="Arial" FontSize="14" Text="Continue" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+					</StackLayout>
+
+					<StackLayout x:Name="collapsAndExpandLayout" Padding="0,0,0,0" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="White" WidthRequest="50">
+					<Label TextColor="#263854" Font="Arial" FontSize="14" Text="Collapse/ Expand" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+            </StackLayout>
+			<!-- SaveShopping cart/Collapse Expand layouts -->
+
+
+
+			<!-- Reseller ScrollView -->
+			<StackLayout Spacing="0" Padding="0" BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="StartAndExpand">
+			<ScrollView Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+			<StackLayout Spacing = "0.5">
+
+			<!--Starting of Reseller profile Layout-->
+			<StackLayout x:Name="resellerProfileLayout" Spacing="0" Padding="5" HeightRequest="35" BackgroundColor="#263854" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+					<StackLayout Spacing="0" Padding="5,0,5,0"  BackgroundColor="Transparent"  HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+						<StackLayout HorizontalOptions = "Center" VerticalOptions ="Center">
+							<Label Text="Reseller Details" TextColor="White" Font="Arial" FontSize="14" HorizontalOptions="Start" XAlign="Center" YAlign="Center"/>
+						</StackLayout>
+					</StackLayout>
+			</StackLayout>
+			<!--Ending of Reseller profile Layout-->
+
+			<!--Starting of Reseller Details Layout-->
+			<StackLayout x:Name="resellerProfileDetailsLayout" Spacing="0" Padding="0" BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="StartAndExpand">
+					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="10,0,10,0">
+								<Label Text="Customer Code" Font="Arial" FontSize="13" HorizontalOptions="FillAndExpand" VerticalOptions="Center" YAlign="Center" XAlign="Start" WidthRequest="50" TextColor="#030303"/>
+								<Label x:Name="customerCodeLabel" TextColor="#6b6b6b" FontSize="13" YAlign="Center" IsEnabled="false" Text="QIUD54RT" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" WidthRequest="50" BackgroundColor="Transparent"/>
+					</StackLayout>
+					<StackLayout HeightRequest="0.5" HorizontalOptions="FillAndExpand" VerticalOptions="Start" BackgroundColor="#E1E1E1"/>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Spacing="0" Padding="10,0,0,0">
+								<Label Text="Registered email id" Font="Arial" FontSize="13" HorizontalOptions="FillAndExpand" VerticalOptions="Center" YAlign="Center" XAlign="Start" WidthRequest="50" TextColor="#030303"/>
+								<Label x:Name="registeredEmailIDLabel" LineBreakMode="TailTruncation" TextColor="#6b6b6b"  Font="Arial" FontSize="13" YAlign="Center" IsEnabled="false" Text="test@testmail.com" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" WidthRequest="50" BackgroundColor="Transparent"/>
+					</StackLayout>
+					<StackLayout HeightRequest="0.5" HorizontalOptions="FillAndExpand" VerticalOptions="Start" BackgroundColor="#E1E1E1"/>
+	
+					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="2" Padding="10,10,10,5">
+								<Label Font="Arial" FontSize="13" YAlign="Center" TextColor="#102B45" Text="Purchase Order No" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+								<Image Source="star.png" HorizontalOptions="Start" VerticalOptions="Start"/>
+					</StackLayout>
+
+					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="2" Padding="10,10,10,5">
+								<Label Font="Arial" FontSize="13" YAlign="Center" TextColor="#102B45" Text="Phone Number" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+								<Image Source="star.png" HorizontalOptions="Start" VerticalOptions="Start"/>
+					</StackLayout>
+					<StackLayout Padding="10,0,10,0" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+									<Entry x:Name="phoneEntry" IsEnabled = "false" Keyboard="Telephone" Placeholder="Enter Phone Number" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+					</StackLayout>
+					<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="2" Padding="10,10,10,5">
+								<Label Font="Arial" FontSize="13" YAlign="Center" TextColor="#102B45" Text="Fax Number" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+					</StackLayout>
+					<StackLayout Padding="10,0,10,0" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+									<Entry x:Name="faxEntry" IsEnabled = "false" Keyboard="Telephone" Placeholder="Enter Fax Number" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+					</StackLayout>
+			</StackLayout>
+			<!--Ending of Reseller Details -->
+
+			<!-- Starting Main Shipping Profile -->
+			<StackLayout Spacing="0" Padding="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+
+					<!--Starting of Shipping profile Layout-->
+					<StackLayout x:Name="shippingProfileLayout" Spacing="0" Padding="5" HeightRequest="35" BackgroundColor="#263854" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+							<StackLayout Spacing="0" Padding="5,0,5,0"  BackgroundColor="Transparent"  HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+								<StackLayout HorizontalOptions = "Center" VerticalOptions ="Center">
+									<Label Text="Shipping Details" TextColor="White" Font="Arial" FontSize="14" HorizontalOptions="Start" XAlign="Center" YAlign="Center"/>
+								</StackLayout>
+							</StackLayout>
+					</StackLayout>
+					<!--Ending of Shipping profile Layout-->
+
+
+					<!--Starting of Shipping Details Layout-->
+					<StackLayout x:Name="shippingDetailsLayout" Spacing="0" Padding="0" BackgroundColor="White" HorizontalOptions="FillAndExpand" Orientation="Vertical" VerticalOptions="StartAndExpand">
+							
+							<!--Starting of Shipping Layout-->
+							<StackLayout Spacing="0" Padding="0" HeightRequest="35" BackgroundColor="#263854" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+									<StackLayout Spacing="0" Padding="15,0,5,0"  BackgroundColor="#72aeb9"  HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+											<Label Text="Select Your Shipping Method" TextColor="White" Font="Arial" FontSize="14" HorizontalOptions="Start" XAlign="Center" YAlign="Center"/>
+									</StackLayout>
+							</StackLayout>
+							<!--Ending of Shipping Layout-->
+
+							<!--Starting of Shipping Picker Layout-->
+							<StackLayout Padding="10,5,10,5" Spacing="8" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+									<Frame HasShadow="false" Padding="5,10,5,10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Start" OutlineColor="#bdbdbd">
+										<RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="23">
+											<StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.90}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1.0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1.0}" Orientation="Horizontal" Padding="5,0,0,0" Spacing="0">
+												<Image Source="dropdown" HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
+											</StackLayout>
+											<local:CustomPicker x:Name="shippingPicker" Title="Select Shipping" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1.0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1.0}"/>
+										</RelativeLayout>
+									</Frame>
+							</StackLayout>
+							<!--Ending of Shipping Picker Layout-->
+
+					</StackLayout>
+					<!--Starting of Shipping Details Layout-->
+			</StackLayout>
+			<!-- Ending Main Shipping Profile -->
+
+			<!-- Starting Main Payment method -->
+			<StackLayout Spacing="0" Padding="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+					<!--Starting of Payment method Layout-->
+					<StackLayout x:Name="paymentLayout" Spacing="0" Padding="5" HeightRequest="35" BackgroundColor="#263854" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+							<StackLayout Spacing="0" Padding="5,0,5,0"  BackgroundColor="Transparent"  HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+								<StackLayout HorizontalOptions = "Center" VerticalOptions ="Center">
+									<Label Text="Select Payment" TextColor="White" Font="Arial" FontSize="14" HorizontalOptions="Start" XAlign="Center" YAlign="Center"/>
+								</StackLayout>
+							</StackLayout>
+					</StackLayout>
+						<StackLayout HorizontalOptions = "Center" VerticalOptions ="Center">
+									<Label Text="Test" TextColor="Black" Font="Arial" FontSize="14" HorizontalOptions="Start" XAlign="Center" YAlign="Center"/>
+						</StackLayout>			
+			</StackLayout>
+			<!--Ending of Shipping profile Layout-->
+
+			</StackLayout>
+			</ScrollView>
+			</StackLayout>
+			<!-- Ending of scrollView -->
+
+
+		</StackLayout>
+		<!--Ending of Layout -->
+
+
+		<StackLayout BackgroundColor="#90000000" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  x:Name="activityIndicatorLayout" IsVisible="false"
+			    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1.0}" 
+			    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1.0}">
+			    <ActivityIndicator Color="White" IsVisible="true" IsRunning="true" HorizontalOptions="Center" VerticalOptions="FillAndExpand" x:Name="actIndicator" />
+  		 </StackLayout>
+		</RelativeLayout>	
+
+	</ContentPage.Content>
+</ContentPage>

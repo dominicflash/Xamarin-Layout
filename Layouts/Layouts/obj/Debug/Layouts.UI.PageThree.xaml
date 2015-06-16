@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:local="clr-namespace:Layouts;assembly=Layouts"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="Layouts.PageThree">
+	<ContentPage.Content>
+
+	<StackLayout>
+			<StackLayout Padding="10,0,10,0" Spacing="8" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+									<Frame HasShadow="false" Padding="5,10,5,10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Start" OutlineColor="#bdbdbd">
+										<RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="23">
+											<local:CustomPicker x:Name="selectContactTextPicker" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1.0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1.0}"/>
+										</RelativeLayout>
+									</Frame>
+			</StackLayout>
+
+			<StackLayout Padding="10,0,10,10" Spacing="8" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+									<Frame HasShadow="false" Padding="5,10,5,10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Start" OutlineColor="#bdbdbd">
+										<RelativeLayout  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="23">
+											<StackLayout  RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.90}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1.0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1.0}" Orientation="Horizontal" Padding="5,0,0,0" Spacing="0">
+												<Image Source="dropdown" HorizontalOptions="End" VerticalOptions="CenterAndExpand">
+												</Image>
+											</StackLayout>
+											<local:CustomPicker x:Name="selectReasonTypePicker" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1.0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1.0}">
+											</local:CustomPicker>
+										</RelativeLayout>
+									</Frame>
+								</StackLayout>
+							</StackLayout>
+
+
+	</ContentPage.Content>
+</ContentPage>

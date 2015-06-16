@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="Layouts.LoginPage" Title="Login" BackgroundColor="#263854">
+	<ContentPage.Content>
+		<RelativeLayout>
+				<StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1.0}" Spacing="0">
+					
+					<!-- Starting of Login layout -->
+					<StackLayout x:Name="loginLayout" Padding="15,0,15,10" Spacing="0" BackgroundColor="Transparent">
+						<!--Starting Username Field -->
+						<StackLayout Orientation="Vertical" Padding="0, 10, 0, 10" Spacing="5">
+							<StackLayout Orientation="Horizontal" Padding="0, 0, 0, 0" Spacing="10">
+								<Image Source="login_username" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+								<Label Font="Arial" FontSize="14" Text="Username" TextColor="White" YAlign="Center"/>
+							</StackLayout>
+							<StackLayout Orientation="Vertical" Spacing="0" Padding="0" HorizontalOptions="FillAndExpand">
+								<Frame HasShadow="false" Padding="10,10,10,10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" OutlineColor="#959595">
+									<Entry x:Name="userNameEntry" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+								</Frame>
+							</StackLayout>
+						</StackLayout>
+						<!--Ending Username Field -->
+
+						<!--Starting Password Field -->
+						<StackLayout Orientation="Vertical" Padding="0, 10, 0, 10" Spacing="5">
+							<StackLayout Orientation="Horizontal" Padding="0, 0, 0, 0" Spacing="10">
+								<Image Source="login_password" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+								<Label Text="Password" Font="Arial" FontSize="14" TextColor="White" YAlign="Center"/>
+							</StackLayout>
+							<StackLayout Orientation="Vertical" Spacing="0" Padding="0" HorizontalOptions="FillAndExpand">
+								<Frame HasShadow="false" Padding="10,10,10,10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" OutlineColor="#959595">
+									<Entry x:Name="passwordEntry" IsPassword="true" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+								</Frame>
+							</StackLayout>
+						</StackLayout>
+						<!--Ending Password Field -->
+
+						<!--Starting of Remember me and Terms and conditions view Layout -->
+						<StackLayout Padding="0" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Spacing="0">
+							<!-- Starting of Remember me layout -->
+							<StackLayout Orientation="Horizontal" Padding="0" Spacing="0" VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand">
+								<Button x:Name="rememberButton" BackgroundColor="Transparent" Image="login_checked" WidthRequest="45" HeightRequest="45" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+								<Label BackgroundColor="Transparent" Text="Remember me" Font="Arial" FontSize="14" TextColor="White" YAlign="Center" HorizontalOptions="StartAndExpand" XAlign="Start"/>
+							</StackLayout>
+							<!-- Ending of Remember me layout -->
+							<!-- Starting of Terms and conditions layout -->
+							<StackLayout Orientation="Horizontal" Padding="0" Spacing="0" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+								<Button x:Name="termsAndConditionsButton" BackgroundColor="Transparent" Image="login_checked" WidthRequest="44" HeightRequest="44" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+								<StackLayout x:Name="viewTermsAndConditionsLayout" Orientation="Vertical" Padding="0" Spacing="1" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+									<Label Text="Accept T &amp; C" FontSize="14" TextColor="White" YAlign="Center" XAlign="End"/>
+									<StackLayout Padding="0" Spacing="0" BackgroundColor="White" HeightRequest="0.5"/>
+								</StackLayout>
+							</StackLayout>
+							<!-- Ending of Terms and conditions layout -->
+							<!--Ending of Remember me and Terms and conditions view Layout -->
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+				<!-- Ending of Main layout -->
+
+			<!-- Starting of forgot password layout -->
+			<StackLayout BackgroundColor="#263854" Padding="0,0,0,0" HeightRequest="40" HorizontalOptions="FillAndExpand" VerticalOptions="End" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=X,Factor=0.0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1.0,Constant=-40}">
+				<RelativeLayout BackgroundColor="#263854" HeightRequest="40" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+					<Label x:Name="forgotPasswordLabel" Font="Arial" FontSize="14" FontAttributes="Bold" HeightRequest="40" XAlign="Center" YAlign="Center" Text="Forgot Password?" TextColor="White" BackgroundColor="#48B0BA"
+						VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5}"/>
+					<Label x:Name="spaceLabel" HeightRequest="40" VerticalOptions="Center" BackgroundColor="White" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.001}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,ElementName=forgotPasswordLabel,Property=Height,Factor=1.0}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=forgotPasswordLabel,Property=Width,Constant=1}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=forgotPasswordLabel,Property=Y,Constant=0}"/>
+					<Label x:Name="loginLabel" Font="Arial" FontSize="14" FontAttributes="Bold" HeightRequest="40" XAlign="Center" YAlign="Center" BackgroundColor="#EE3B34" Text="Login" TextColor="White"
+						HorizontalOptions="Center" VerticalOptions="Center" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,ElementName=spaceLabel,Property=Height,Factor=1.0}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,ElementName=spaceLabel,Property=X,Constant=1}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=spaceLabel,Property=Y,Constant=0}"/>
+				</RelativeLayout>
+			</StackLayout>
+			<!-- Ending of forgot password layout -->
+
+			<!-- Terms and conditions Stacklayout -->
+			<StackLayout BackgroundColor="#143554" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X,Factor=1.0}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y,Factor=1.0}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1.0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1.0}" x:Name="scrollStack" IsVisible="false" Padding="10,10,10,10" Spacing="0">
+				<StackLayout x:Name = "termsAndConditionsLayout" Spacing="0" Padding="10" Orientation="Horizontal" BackgroundColor="#263854">
+					<Label Text="Terms &amp; Conditions" Font="Arial" FontSize="14" TextColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="CenterAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+					<WebView x:Name="termsAndConditionsWebView" IsEnabled="true" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></WebView>
+				</StackLayout>
+				<StackLayout x:Name="acceptTermsAndConditionsLayout" Spacing="0" Padding="10" Orientation="Horizontal" VerticalOptions="End" BackgroundColor="#EE3B34">
+					<Label Text="Accept" Font="Arial" FontAttributes="Bold" FontSize="14" TextColor="White" XAlign="Center" YAlign="Center" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
+				</StackLayout>
+			</StackLayout>
+			<!-- Ending Terms and conditions Stacklayout -->
+
+			<!-- Starting of Activity Indicator Layout -->
+			<StackLayout BackgroundColor="#90000000" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  x:Name="activityIndicatorLayout" IsVisible="false"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1.0}" 
+				RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height,Factor=1.0}">
+				<ActivityIndicator Color="White" IsVisible="true" IsRunning="true" HorizontalOptions="Center" VerticalOptions="FillAndExpand" x:Name="actIndicator" />
+			</StackLayout>
+			<!-- Ending of Activity Indicator Layout -->
+
+		</RelativeLayout>
+	</ContentPage.Content>
+
+</ContentPage>
